@@ -1,0 +1,18 @@
+﻿@model FoodyTekmerEntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "UpdateCategory";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<div class="container">
+    <form method="post">
+        <label>Kategori Id</label>
+        <input type="text" asp-for="CategoryId" class="form-control" />
+        <br />
+        <label>Kategori Adı</label>
+        <input  type="text" asp-for="CategoryName" class="form-control"/>
+        <br />
+        <button class="btn btn-warning">Kategoriyi Güncelle</button>
+    </form>
+</div>
+

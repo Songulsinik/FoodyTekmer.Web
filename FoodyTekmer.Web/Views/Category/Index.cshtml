@@ -1,0 +1,30 @@
+﻿@model List<FoodyTekmerEntityLayer.Concrete.Category>
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<h2>Kategori listesi</h2>
+
+<div class="container">
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>Kategori Id</th>
+            <th>Kategori Name</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryId</td>
+                <td>@item.CategoryName</td>
+                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Category/CreateCategory" class=" btn btn-primary"> Yeni kategori giriş</a>
+</div>
